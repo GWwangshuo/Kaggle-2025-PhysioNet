@@ -1,4 +1,4 @@
-# Kaggle-2025-PhysioNet 6th Place Solution
+# 6th Place Solution
 
 
 ## Usage
