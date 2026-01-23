@@ -3,7 +3,7 @@
 
 ## Usage
 
-To execute the complete workflow, including data preparation, model training, and inference, run:
+Before executing the complete workflow, first perform data preparation, and then run the pipeline.
 ```bash
 bash train.sh
 ```
