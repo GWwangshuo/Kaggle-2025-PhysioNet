@@ -3,7 +3,6 @@
 ├── directory_structure.txt
 ├── SETTINGS.json
 ├── README.md
-├── get_tree.py
 ├── data/
 │   ├── processed/
 │   ├── raw/
