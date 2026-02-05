@@ -203,7 +203,7 @@ def main(args):
     print(optimizer)
 
     # Training loop
-    best_metric = float('-inf')  # 用于保存最好指标，例如 SNR
+    best_metric = float('-inf')
     print(f"Start training for {args.epochs} epochs")
     start_time = time.time()
     for epoch in range(args.start_epoch, args.epochs):
