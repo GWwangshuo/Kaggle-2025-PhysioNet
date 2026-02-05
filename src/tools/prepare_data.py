@@ -25,15 +25,21 @@ def main():
             'extract_dir': raw_data_dir / 'physionet-ecg-image-digitization'
         },
         {
-            'type': 'customized',
+            'type': 'dataset',
             'name': 'sjtuwangshuo/2nd-stage-data',
-            'extract_dir': processed_data_dir / '2nd-stage-data'
+            'extract_dir': processed_data_dir
         }
+        
     ]
 
     for item in datasets:
         print(f"Downloading competition data {item['name']}")
-        api.competition_download_files(item['name'], path=str(raw_data_dir), quiet=False)
+        
+        if item['type'] == 'dataset':
+            api.dataset_download_files(item['name'], path=str(raw_data_dir), unzip=False, quiet=False)
+        elif item['type'] == 'competition':
+            api.competition_download_files(item['name'], path=str(raw_data_dir), quiet=False)
+        
         zip_filename = item['name'] + '.zip'
        
         zip_file = raw_data_dir / zip_filename

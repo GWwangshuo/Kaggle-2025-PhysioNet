@@ -1,13 +1,13 @@
 import os
 
 class Config:
-    # --- 路径配置 (对应 SETTINGS.json) ---
+    # --- Path configuration (corresponds to SETTINGS.json) ---
     DATA_PATH = 'data/raw/physionet-ecg-image-digitization'
     SECOND_STAGE_DATA_PATH = 'data/processed/2nd-stage-data'
     OUTPUT_DIR = 'models/trained_models'
     PRETRAINED_WEIGHTS = "models/pretrained/unet_weights_07072025.pt"
     
-    # --- 模型架构参数 ---
+    # --- Model architecture parameters ---
     MODEL_PARAMS = {
         "num_in_channels": 3,
         "num_out_channels": 4,
@@ -15,7 +15,7 @@ class Config:
         "depth": 2
     }
 
-    # --- 训练超参数 ---
+    # --- Training hyperparameters ---
     START_EPOCH = 1
     EPOCHS = 200
     WARMUP_EPOCHS = 5
@@ -26,20 +26,20 @@ class Config:
     WEIGHT_DECAY = 0.01
     FOLD = 'all'
     
-    # --- 系统参数 ---
+    # --- System parameters ---
     SEED = 0
     NUM_WORKERS = 12
     PIN_MEM = True
     DEVICE = 'cuda'
     
-    # --- 日志与保存 ---
+    # --- Logging and checkpointing ---
     SAVE_LAST_FREQ = 5
     LOG_FREQ = 100
     
-    # --- 分布式训练 ---
+    # --- Distributed training ---
     WORLD_SIZE = 1
     LOCAL_RANK = -1
     DIST_URL = 'env://'
 
-# 实例化
+# Instantiate configuration
 cfg = Config()
