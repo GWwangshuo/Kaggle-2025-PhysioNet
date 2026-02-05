@@ -51,11 +51,9 @@ python3 src/tools/prepare_data.py
 
 #### 2. Model Training
 Launch the training pipeline for the signal regression model:
-
-- **MONAI U-Net (1 residual unit, spatial size: 128x256x256, 7 classes)**
-  ```bash
-  torchrun --nproc_per_node=8 src/train.py
-  ```
+```bash
+torchrun --nproc_per_node=8 src/train.py
+```
 
 
 #### 3. Model Prediction
