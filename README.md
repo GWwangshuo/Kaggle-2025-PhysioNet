@@ -61,7 +61,7 @@ torchrun --nproc_per_node=8 src/train.py
 2. Update the dataset path `LIBS_DIR` and the absolute checkpoint path `weights` in the `submit.ipynb` notebook.
 3. Excute the `submit.ipynb` notebook.
 
-##### Model Performance
+## Model Performance
 
 | No   | Architecture                | Parameters | Epochs | Extra Data | Resampling Length | TTA   | Public LB | Private LB |
 | ---- | --------------------------- | ---------- | ------ | ---------- | ----------------- | ----- | --------- | ---------- |
@@ -75,6 +75,6 @@ torchrun --nproc_per_node=8 src/train.py
 
 
 
-##### Acknowledgments
+## Acknowledgments
 
 We would like to thank [hengck23](https://www.kaggle.com/code/hengck23/demo-submission) for sharing his excellent work, which provided valuable reference of the overall pipelines.
