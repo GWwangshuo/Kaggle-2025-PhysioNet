@@ -1,6 +1,6 @@
 #  - PhysioNet - Digitization of ECG Images - 6th Place Solution
 
-This repository contains the 6th place solution for the PhysioNet - Digitization of ECG Images competition. For a detailed discussion, please refer to the [competition discussion thread](https://www.kaggle.com/competitions/physionet-ecg-image-digitization/writeups/6th-place-solution). Some components of this codebase are derived from [this source](https://github.com/GWwangshuo/Kaggle-2025-PhysioNet).
+This repository contains the 6th place solution for the PhysioNet - Digitization of ECG Images competition. For a detailed discussion, please refer to the [competition discussion thread](https://www.kaggle.com/competitions/physionet-ecg-image-digitization/writeups/6th-place-solution).
 
 ## Environment
 
