@@ -125,7 +125,6 @@ def evaluate(model, data_loader, device, epoch=None, log_writer=None):
         snr_mean = snr_metric(out[f'y_mv_{target_len}'], ecg_mv[f'{target_len}'])
         metric_logger.update(snr=snr_mean)
 
-    # 汇总多卡结果
     snr_value_reduce = misc.all_reduce_mean(metric_logger.meters['snr'].global_avg)
     print(f" * [Epoch {epoch}] Avg SNR {snr_value_reduce:.4f}")
 

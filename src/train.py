@@ -172,8 +172,8 @@ def main(args):
     torch._dynamo.config.optimize_ddp = False
     
     model = load_model(
-        weights_path=args.pretrained_weights, # 使用从 args 获取的路径
-        **cfg.MODEL_PARAMS                    # 解包模型架构参数
+        weights_path=args.pretrained_weights,
+        **cfg.MODEL_PARAMS
     )
 
     print("Model =", model)
@@ -213,7 +213,6 @@ def main(args):
         train_one_epoch(scaler, model, data_loader_train, optimizer, device, epoch, log_writer=log_writer, args=args)
         
         # Perform online evaluation
-        
         if args.fold != 'all':
             torch.cuda.empty_cache()
             metric = evaluate(model, data_loader_valid, device, epoch=epoch, log_writer=log_writer)
