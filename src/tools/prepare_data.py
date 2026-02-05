@@ -11,21 +11,23 @@ def main():
     settings = load_settings()
     raw_data_dir = settings.raw_data_dir
     raw_data_dir.mkdir(parents=True, exist_ok=True)
+    
+    processed_data_dir = settings.processed_data_dir
+    processed_data_dir.mkdir(parents=True, exist_ok=True)
 
     api = KaggleApi()
     api.authenticate()
 
     datasets = [
-        # {
-        #     'type': 'competition',
-        #     'name': 'physionet-ecg-image-digitization',
-        #     'extract_dir': raw_data_dir / 'physionet-ecg-image-digitization'
-        # },
-        
+        {
+            'type': 'competition',
+            'name': 'physionet-ecg-image-digitization',
+            'extract_dir': raw_data_dir / 'physionet-ecg-image-digitization'
+        },
         {
             'type': 'customized',
             'name': 'sjtuwangshuo/2nd-stage-data',
-            'extract_dir': raw_data_dir / '2nd-stage-data'
+            'extract_dir': processed_data_dir / '2nd-stage-data'
         }
     ]
 
